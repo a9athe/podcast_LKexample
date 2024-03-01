@@ -1,4 +1,4 @@
-# The Future in Tech
+# Example from the LinkedIn tutorial
 
 <img src="https://raybo.org/tfit-feed/images/artwork.jpg" width="250">
 
