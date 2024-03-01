@@ -6,22 +6,9 @@ jobs:
     steps: 
       - name: Checkout Repo #not mandatory to name the steps
         uses: actions/checkout@v3 
-      - name : Setup Python
-        uses: actions/setup-python@v4 #install python 
-        with: #pass along some setup and variables
-          python-version: '3.10'
-      - name: Install Dependencies
-        run: | #as in terminal
-          python -m pip install --upgrade pip
-          pip install pyyaml 
       - name: Run Feed Generator
-        run: python feed.py #execute our file that generate the xml file
-      - name: Push Repo
-        run: |
-          git config user.name github-actions 
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "Modified Feed"
-          git push
+        uses: a9athe/podcast-generator-LKexample@main #uses our other depo to set up the environment and do the git actions
+        
+        
           
         
